@@ -2,9 +2,9 @@ node {
 
     checkout scm
 
-    docker.withRegistry('https://registry.hub.docker.com', 'dockerHub') {
+    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
 
-        def customImage = docker.build("miltonc/dockerwebapp")
+        def customImage = docker.build("indu527/ngapp")
 
         /* Push the container to the custom Registry */
         customImage.push()
