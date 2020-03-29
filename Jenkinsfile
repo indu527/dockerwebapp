@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Test'){
             steps {
-              bat "echo Testing..."
+              sh "echo Testing..."
             }
         }
    }
