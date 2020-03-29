@@ -15,7 +15,7 @@ pipeline {
         stage ('Build docker image') { 
             steps {
                script {
-                  docker.withRegistry(${ARTIFACTORY_DOCKER_REGISTRY}, 'dockerhub') {
+                  docker.withRegistry(${DOCKER_REGISTRY}, 'dockerhub') {
                       def customImage = docker.build("indu527/ngapp")
                 customImage.push()
                   }
